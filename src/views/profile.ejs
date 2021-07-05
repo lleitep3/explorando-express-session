@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+
+  <% include ./partials/global-styles.ejs %>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+  <% include ./partials/header.ejs %>
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+        <br>
+        <h1 class="mt-5">Minhas informações: </h1>
+
+        <form class="needs-validation" action="/me" method="POST" novalidate>
+          <div class="form-row">
+
+            <!--  CAMPO DE NOME  -->
+            <div class="col-md-6">
+              <label for="nameInput">Nome</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="Seu nome" value="<%=user.name%>"
+                name="name" required>
+
+              <% if (locals.error && locals.error.name) { %>
+                <div class="invalid-feedback">
+                  <%= locals.error.name %>
+                </div>
+                <% } %>
+            </div>
+            <!--  FIM - CAMPO DE NOME  -->
+
+            <!--  CAMPO DE EMAIL  -->
+            <div class="col-md-6">
+              <label for="emailInput">Email</label>
+              <input type="text" class="form-control" id="emailInput" placeholder="seu@email.com"
+                value="<%=user.email%>" name="email" required>
+
+              <% if (locals.error && locals.error.email) { %>
+                <div class="invalid-feedback">
+                  <%= locals.error.email %>
+                </div>
+                <% } %>
+            </div>
+            <!--  FIM - CAMPO DE EMAIL  -->
+
+            <div class="col-md-6">
+              <label for="phoneInput">Telefone</label>
+              <input type="text" class="form-control" id="phoneInput" placeholder="(11) 99999-9999"
+                value="<%=user.phone%>" name="phone" required>
+
+              <% if (locals.error && locals.error.phone) { %>
+                <div class="invalid-feedback">
+                  <%= locals.error.phone %>
+                </div>
+                <% } %>
+            </div>
+          </div>
+          <br>
+          <button class="btn btn-primary" type="submit">Salvar</button>
+        </form>
+
+      </div>
+    </main>
+
+    <% include ./partials/footer.ejs %>
+</body>
+
+</html>

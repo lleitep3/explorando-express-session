@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "npx npdemon ./bin/www"
+    "dev": "npx nodemon ./bin/www",
+    "sequelize": "npx sequelize",
+    "migrate": "npx sequelize db:migrate",
+    "seed": "npx sequelize db:seed:all"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,9 +16,12 @@
     "express": "~4.16.1",
     "express-session": "^1.17.2",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
   }
 }

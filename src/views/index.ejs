@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+
+  <% include ./partials/global-styles.ejs %>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+  <% include ./partials/header.ejs %>
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+        <br>
+        <h1 class="mt-5">Olá! Bem-vindo(a) ao site!</h1>
+      </div>
+    </main>
+
+    <% include ./partials/footer.ejs %>
+</body>
+
+</html>
