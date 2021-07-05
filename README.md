@@ -44,6 +44,7 @@ Depois acesse [http://localhost:3000](http://localhost:3000)
 ### Desafios:
 
 - [ ] Subir a aplicação;
+- [ ] Estude a estrutura da aplicação (pastas, arquivos, organização do código). critique antes de perguntar. reflita se a estrutura faz sentido pra você, tire suas conclusões;
 - [ ] Na Home, quando estiver logado, deve imprimir "Olá <nome do usuário>!" e quando não estiver, deve mostrar "Olá visitante!";
 - [ ] A Página `/me` só pode ser acessada quando o usuário estiver logado;
 - [ ] Criar a rota de atualização do perfil;
