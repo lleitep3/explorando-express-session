@@ -39,3 +39,16 @@ $ npm run dev
 ```
 
 Depois acesse [http://localhost:3000](http://localhost:3000)
+
+
+### Desafios:
+
+- [ ] Subir a aplicação;
+- [ ] Na Home, quando estiver logado, deve imprimir "Olá <nome do usuário>!" e quando não estiver, deve mostrar "Olá visitante!";
+- [ ] A Página `/me` só pode ser acessada quando o usuário estiver logado;
+- [ ] Criar a rota de atualização do perfil;
+- [ ] Cria a rota de atualização de senha;
+- [ ] Implementar a atualização de senha na página de perfil;
+- [ ] Implementar a lib `dotenv` na aplicação;
+- [ ] Criar a página de listagem dos usuários do sistema;
+- [ ] Implementar o CRUD dos usuários do sistema (a página deve ser acessivel apenas para usuários logados);
