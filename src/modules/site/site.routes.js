@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/', SiteController.homePage)
 router.get('/me', SiteController.profilePage)
 router.get('/login', SiteController.loginPage)
-router.get('/register', SiteController.redisterPage)
+router.get('/register', SiteController.registerPage)
 /* END - Site Pages */
 
 router.post('/login', SiteController.doLogin)

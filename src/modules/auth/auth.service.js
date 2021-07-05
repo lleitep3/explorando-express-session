@@ -6,7 +6,7 @@ class AuthService {
     try {
       const user = await UserService.findByEmail(email)
 
-      if (!user || verify(password, user.password)) {
+      if (user && verify(password, user.password)) {
         return user
       }
 

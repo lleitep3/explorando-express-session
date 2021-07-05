@@ -3,8 +3,8 @@ const UserService = require('../users/users.service')
 
 class SiteController {
   static registerPage (req, res) {
-    res.json({
-      success: 'true'
+    res.render('register', {
+      title: 'APP Cadastro'
     })
   }
 
@@ -22,12 +22,6 @@ class SiteController {
   static loginPage (req, res) {
     res.render('login', {
       title: 'APP Entrar'
-    })
-  }
-
-  static redisterPage (req, res) {
-    res.render('register', {
-      title: 'APP Cadastro'
     })
   }
 
